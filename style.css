@@ -1,0 +1,84 @@
+/* Tính padding và border vào chiều rộng/cao của phần tử */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 48px 16px;
+  font-family: Arial, sans-serif;
+  background: #eef1f6;
+  color: #1f2937;
+}
+
+/* Khung chính: căn giữa trang */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #ffffff;
+  border: 1px solid #dde3ec;
+  border-radius: 8px;
+}
+
+.title {
+  margin: 0 0 16px;
+  font-size: 24px;
+}
+
+/* Flexbox: ô nhập và nút nằm cùng một hàng */
+.todo-form {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;               /* ô nhập chiếm hết chỗ còn lại */
+  padding: 10px 12px;
+  font-size: 16px;
+  border: 1px solid #c5cdd9;
+  border-radius: 4px;
+}
+
+.todo-input:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: 1px;
+}
+
+.todo-btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  color: #ffffff;
+  background: #2563eb;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-btn:hover {
+  background: #1d4ed8;
+}
+
+.todo-btn:focus-visible {
+  outline: 2px solid #1d4ed8;
+  outline-offset: 2px;
+}
+
+/* Flexbox: danh sách xếp dọc, các việc cách đều nhau */
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.todo-list li {
+  padding: 10px 12px;
+  border: 1px solid #e3e8ef;
+  border-radius: 4px;
+  background: #f8fafc;
+  overflow-wrap: anywhere;   /* chuỗi dài không làm vỡ khung */
+}
